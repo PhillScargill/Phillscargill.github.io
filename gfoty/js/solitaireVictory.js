@@ -68,11 +68,11 @@
 
         if(clear){
             for(i=0;i<$('.solitaire-victory-clone').length;i++)
-            setTimeout(function () {
+            //setTimeout(function () {
                 $('.solitaire-victory-clone').slice(1).fadeOut("slow", function() {
                     $(this).remove();
                 }); 
-            }, 100 * i);
+            //}, 100 * i);
             $(".solitaire-victory-clone")
         }
 
