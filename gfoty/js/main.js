@@ -1,5 +1,6 @@
 $(document).on('ready', function() {
-    window.setInterval(NewTongue, 3000);
+	NewTongue();
+    window.setInterval(NewTongue, 5000);
 })
 
 function NewTongue(){
