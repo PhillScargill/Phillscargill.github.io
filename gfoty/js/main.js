@@ -1,4 +1,5 @@
 var interval = 10000;
+var randPosX;
 
 $(document).on('ready', function() {
     NewTongue1();
@@ -15,7 +16,8 @@ $(document).on('ready', function() {
 })
 
 function NewTongue1(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = false;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
@@ -24,7 +26,8 @@ function NewTongue1(){
 }
 
 function NewTongue2(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = true;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
@@ -33,7 +36,8 @@ function NewTongue2(){
 }
 
 function NewTongue3(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = false;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
@@ -42,7 +46,8 @@ function NewTongue3(){
 }
 
 function NewTongue3(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = true;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
@@ -51,7 +56,8 @@ function NewTongue3(){
 }
 
 function NewTongue4(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = false;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
@@ -60,7 +66,8 @@ function NewTongue4(){
 }
 
 function NewTongue5(){
-    var randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
+    fallToLeft = true;
+    randPosX = Math.floor((Math.random()*$('#tonguezone').width()));
     $('#tongueimg')
         .clone()
         .css('left', randPosX)
