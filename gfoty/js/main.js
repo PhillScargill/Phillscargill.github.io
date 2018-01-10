@@ -1,4 +1,4 @@
-var interval = 5000;
+var interval = 7000;
 var randPosX;
 
 $(document).on('ready', function () {
