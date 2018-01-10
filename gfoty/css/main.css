@@ -2,6 +2,7 @@ body {
     background-image: url("../img/bg_tile.gif");
     background-repeat: repeat;
     z-index: -1;
+    overflow: hidden;
 }
 
 #tongueimg {
@@ -10,9 +11,9 @@ body {
 }
 
 #tonguezone {
-    height: 100%;
-    width: 100%;
-    margin-top: -80px;;
+    height: 105%;
+    width: 60%;
+    margin-top: -5%;
     z-index: -1;
 }
 
