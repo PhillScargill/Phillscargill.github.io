@@ -6,12 +6,14 @@
 
         var g = settings.g || -5;
         var dt = settings.dt || 20;
-        var bounce = settings.bounce || 0.7;
+        var bounce = settings.bounce || 0.8;
         var endVelocity = settings.endVelocity || 20;
         var stagger = settings.stagger || 200;
         var relativeToDocument = settings.relativeToDocument || false;
         var clear = settings.clear || true;
-        var fallToLeft = settings.fallToLeft || false;
+
+        var random_boolean = Math.random() >= 0.5;
+        var fallToLeft = settings.fallToLeft || random_boolean;
 
         var body = $('body');
         var windowHeight = (relativeToDocument ? $(document).height() : $(window).height());
