@@ -1,4 +1,4 @@
-var interval = 6000;
+var interval = 3000;
 var randPosX;
 
 $(document).on('ready', function () {
@@ -15,7 +15,6 @@ function NewTongue() {
         .attr("id","freshfromthecloningvats")
         .show()
         .css('left', randPosX)
-        .css('top', -100)
         .appendTo("#tonguezone")
         .solitaireVictory();
         

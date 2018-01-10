@@ -66,7 +66,15 @@
             }, stagger);
         };
 
-        if (clear) $('.solitaire-victory-clone').remove();
+        if(clear){
+            for(i=0;i<$('.solitaire-victory-clone').length;i++)
+            setTimeout(function () {
+                $('.solitaire-victory-clone').slice(1).fadeOut("slow", function() {
+                    $(this).remove();
+                }); 
+            }, 100 * i);
+            $(".solitaire-victory-clone")
+        }
 
         this.each(function (index) {
             var obj = $(this);
