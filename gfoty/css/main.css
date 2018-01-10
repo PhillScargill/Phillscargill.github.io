@@ -42,7 +42,7 @@ body {
 }
 
 #spotifyiframe {
-    box-shadow: 0px 0px 100px 20px #F945B6;
+    animation:pulse 0.4s infinite alternate;
 }
 
 #twittershit {
@@ -54,4 +54,9 @@ body {
 
 #freshfromthecloningvats {
     margin-top: -80px;
+}
+
+@keyframes pulse {
+    from { box-shadow:0px 0px 100px 2px #F945B6; }
+    to { box-shadow:0px 0px 100px 20px #F945B6; }
 }
