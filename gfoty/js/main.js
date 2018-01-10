@@ -17,6 +17,4 @@ function NewTongue() {
         .css('left', randPosX)
         .appendTo("#tonguezone")
         .solitaireVictory();
-        
-        
 }
