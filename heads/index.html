@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="node_modules/phaser/dist/phaser.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body style="overflow: hidden">
+
+    <script>
+
+    var config = {
+        type: Phaser.AUTO,
+        width: 1920,
+        height: 1080,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 1 }
+            }
+        },
+        scene: {
+            preload: preload,
+            create: create,
+            //update: update
+        }
+    };
+
+    var game = new Phaser.Game(config);
+
+    function preload ()
+    {
+        this.load.setBaseURL('http://localhost');
+
+        this.load.image('sky', 'images/sky.jpg');
+        
+        this.load.image('me', 'images/me.png');
+        this.load.image('oli', 'images/oli.png');
+        this.load.image('zac', 'images/zac.png');
+        this.load.image('eloise', 'images/eloise.png');
+        this.load.image('rich', 'images/rich.png');
+        this.load.image('matt', 'images/matt.png');
+        this.load.image('jackr', 'images/jackr.png');
+        this.load.image('bateman', 'images/bateman.png');
+        this.load.image('jackv', 'images/jackv.png');
+        this.load.image('marcus', 'images/marcus.png');
+        this.load.image('cal', 'images/cal.png');
+        
+        this.load.image('red', 'images/red.png');
+        this.load.image('green', 'images/green.png');
+        this.load.image('purple', 'images/purple.png');
+        this.load.image('blue', 'images/blue.png');
+        this.load.image('pink', 'images/pink.png');
+        this.load.image('yellow', 'images/yellow.png');
+        this.load.image('orange', 'images/orange.png');
+        this.load.image('white', 'images/white.png');
+        this.load.image('turqoise', 'images/turqoise.png');
+        
+    }
+
+    function create ()
+    {
+        this.add.image(960, 500, 'sky');
+
+        var particlesred = this.add.particles('red');
+        var particlesgreen = this.add.particles('green')
+        var particlespurple = this.add.particles('purple')
+        var particlesblue = this.add.particles('blue')
+        var particlespink = this.add.particles('pink')
+        var particlesyellow = this.add.particles('yellow')
+        var particlesorange = this.add.particles('orange')
+        var particleswhite = this.add.particles('white')
+        var particlesturqoise = this.add.particles('turqoise')
+        
+
+        var emitteroli = particlesorange.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterme = particlespink.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emittereloise = particlesgreen.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterrich = particlesgreen.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emittermatt = particlesred.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterjackr = particlesturqoise.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterbateman = particlespurple.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterjackv = particlesblue.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emittermarcus = particlesturqoise.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emittercal = particlesyellow.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+        var emitterzac = particleswhite.createEmitter({
+            speed: 100,
+            scale: { start: 1, end: 0 },
+            blendMode: 'ADD'
+        });
+
+
+
+        var oli = this.physics.add.image(100, 50, 'oli');
+        var me = this.physics.add.image(200, 150, 'me');
+        var zac = this.physics.add.image(300, 250, 'zac');
+        var eloise = this.physics.add.image(400, 350, 'eloise');
+        var rich = this.physics.add.image(500, 450, 'rich');
+        var matt = this.physics.add.image(600, 550, 'matt');
+        var jackr = this.physics.add.image(700, 500, 'jackr');
+        var bateman = this.physics.add.image(800, 400, 'bateman');
+        var jackv = this.physics.add.image(900, 300, 'jackv');
+        var marcus = this.physics.add.image(1000, 200, 'marcus');
+        var cal = this.physics.add.image(1100, 100, 'cal');
+
+        oli.setVelocity(180, 100);
+        oli.setBounce(1, 1);
+        oli.setCollideWorldBounds(true);
+
+        me.setVelocity(220, 200);
+        me.setBounce(1, 1);
+        me.setCollideWorldBounds(true);
+
+        zac.setVelocity(185, 200);
+        zac.setBounce(1, 1);
+        zac.setCollideWorldBounds(true);
+
+        eloise.setVelocity(190, 200);
+        eloise.setBounce(1, 1);
+        eloise.setCollideWorldBounds(true);
+        
+        rich.setVelocity(195, 200);
+        rich.setBounce(1, 1);
+        rich.setCollideWorldBounds(true);
+        
+        matt.setVelocity(200, 200);
+        matt.setBounce(1, 1);
+        matt.setCollideWorldBounds(true);
+        
+        jackr.setVelocity(205, 200);
+        jackr.setBounce(1, 1);
+        jackr.setCollideWorldBounds(true);
+        
+        bateman.setVelocity(210, 200);
+        bateman.setBounce(1, 1);
+        bateman.setCollideWorldBounds(true);
+        
+        jackv.setVelocity(215, 200);
+        jackv.setBounce(1, 1);
+        jackv.setCollideWorldBounds(true);
+        
+        marcus.setVelocity(220, 200);
+        marcus.setBounce(1, 1);
+        marcus.setCollideWorldBounds(true);
+        
+        cal.setVelocity(225, 200);
+        cal.setBounce(1, 1);
+        cal.setCollideWorldBounds(true);
+
+
+        emitteroli.startFollow(oli);
+        emitterme.startFollow(me);
+        emitterzac.startFollow(zac);
+        emittereloise.startFollow(eloise);
+        emitterrich.startFollow(rich);
+        emittermatt.startFollow(matt);
+        emitterjackr.startFollow(jackr);
+        emitterbateman.startFollow(bateman);
+        emitterjackv.startFollow(jackv);
+        emittermarcus.startFollow(marcus);
+        emittercal.startFollow(cal);
+        
+        //game.physics.arcade.collide(me, oli);
+        //game.physics.arcade.collide(oli, me);
+
+    }
+    </script>
+
+</body>
+</html>
